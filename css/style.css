@@ -17,11 +17,20 @@
 body {
 	color: #fff;
 	font-family: Arial, sans-serif;
-	font-size: 14px;
+    font-size: 14px;
+    text-align: center;
 }
 .pozadina{
-    background: url("../static/burningleaf.jpg") no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background: url("../static/leaf3.jpg") repeat;
     background-size: 100%;
+    /*FLEX BOX*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pozadina2{
+    background-image: url("../static/leaf3.jpg");
 }
 
 a {
@@ -46,12 +55,11 @@ a {
     background-size: 100% 100%;
 }
   
-div.bend p {
-    margin: 5%;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-  }
+.bend p {
+    padding: 2%;
+    font-size: 25px;
+}
+
 section#prvi {
     background-image: url(../static/bleafcut.jpg);
 }
@@ -127,18 +135,34 @@ nav a:hover {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	text-transform: uppercase;
     font-family: font1;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    padding: 5%;
+    padding-top: 4%;
 }
 h3{
-    font-size: 20px;
+    font-size: 30px;
     font-family: font2;
     text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.icon{
+    padding: 10px;
+    width:50px;
+    height:50px;
+}
+.galery{
+    width: 450px;
+    height: 450px;
+    padding: 50px;
+}
+  
+  .galery:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform .2s;
 }
 
 /*forma*/
@@ -202,19 +226,11 @@ input[type="submit"]:hover {
 		float: right;
 	}
 
-	#slider p {
-		top: 40%;
-	}
-
 	[class*="col-"] {
 		float: left;
 	}
 
 	.col-m-6 {width: 50%;}
-
-	.kolone:nth-child(2), .kolone:nth-child(4) {
-		border-left: 2px solid #dc3545;
-	}
 }
 
 @media screen and (min-width: 1000px) {
