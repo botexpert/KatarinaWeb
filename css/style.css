@@ -14,15 +14,24 @@
     src: url(../fonts/RowlandDemoLight.ttf);
 }
 
+
 body {
-	color: #fff;
-	font-family: Arial, sans-serif;
+	background-image: linear-gradient(#2c0c01,black);
     font-size: 14px;
-    text-align: center;
+	text-align: center;
+	color: #fff;
 }
+
+div#top{
+	float: left;
+	flex:50%;
+	min-width:50%;
+	max-width: 50%;
+}
+
 .pozadina{
-    background-color: rgba(0, 0, 0, 0.5);
-    background: url("../static/leaf3.jpg") repeat;
+    background-image: radial-gradient(#2c0c01,#000000);
+   /* background: url("../static/leaf3.jpg") repeat;*/
     background-size: 100%;
     /*FLEX BOX*/
     display: flex;
@@ -33,46 +42,51 @@ body {
     background-image: url("../static/leaf3.jpg");
 }
 
+
 a {
 	text-decoration: none;
 }
 
 #header-wrapper {
     background-image: linear-gradient(#000000,#2c0c01);
-	border-bottom: 4px solid #000000;
+	border-bottom: 2px solid #000000;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	
+	/*FLEX BOX*/
+	display: flow-root;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #footer-wrapper {
-    border-top: 4px solid rgb(0, 0, 0);
-	padding: 30px 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	border-top: 4px solid rgb(0, 0, 0);
+	background-color: rgb(53, 48, 48);
 	text-align: center;
+
 }
 
 .bend {
+	padding: 2% 2%;
     background-color: rgba(0, 0, 0, 0.5);
 	background: url("../static/burningleaf.jpg") no-repeat;
     background-size: 100% 100%;
 }
   
 .bend p {
-    padding: 2%;
     font-size: 25px;
 }
 
-section#prvi {
-    background-image: url(../static/bleafcut.jpg);
-}
+
 header , footer{
     background-color: rgba(255, 255, 255,0);
-    padding-top: 2%;
-    padding-bottom: 2% ;
     padding-left: 5% ;
     padding-right: 5% ;
     overflow: auto;
 }
+
 h1 { 
-    padding-left: 8% ;
 	text-align: center;
 	text-transform: uppercase;
     font-family: font1;
@@ -107,6 +121,9 @@ nav a:hover {
 	color: #ba7934;
 	transition: 0.3s;
 }
+nav a#current{
+	color: #ba7934;
+	}
 
 /* HAMBURGER */
 
@@ -133,6 +150,7 @@ nav a:hover {
 	line-height: 65px;
 	padding: 2px 17px 0 15px;
 }
+/* HAMBURGER END */
 
 h2 {
 	font-size: 40px;
@@ -140,7 +158,6 @@ h2 {
 	text-transform: uppercase;
     font-family: font1;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    padding-top: 4%;
 }
 h3{
     font-size: 30px;
@@ -160,15 +177,17 @@ h3{
     padding: 50px;
 }
   
-  .galery:hover {
+.galery:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    transition: transform .2s;
+	transition: transform .2s;
+	z-index: 10;
 }
 
 /*forma*/
 
 form {
-	margin-bottom: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	text-align: center;
 }
 
@@ -201,6 +220,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	width: 50%;
 	transition: 0.3s;
+}
+textarea{
+	display: block;
+	background-color: #262533;
+	width: 50%;
+	margin: 15px auto;
+	padding: 10px;
+	border: 1px solid #DC3545;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	font-family: font2;
 }
 
 @media screen and (min-width: 690px) {

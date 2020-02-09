@@ -23,6 +23,7 @@
                     <a href="Merch.html">Prodavnica</a>
                     <a href="Events.html">Dogadjaji</a>
                     <a href="Gallery.html">Galerija slika</a>
+                    <a id="current" href="">Kontakt</a>
                    
                 </nav>
                 <button class="hamburger">&#9776;</button>
@@ -30,8 +31,37 @@
     
             </header>
         </div>
-        
+        <div id="gradient">
+            <!-- Forma -->
 
+        <form method="GET" action="mailto:test@example.com" enctype="text/plain">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject">   
+            
+            <label for="Name">Name</label>
+            <input name="Name">
+            
+            <label for="E-Mail Address">E-Mail</label>
+            <input name="E-Mail Address">
+            
+            <label for="Message">Message</label>
+            <textarea name="Message"></textarea>        
+            <br>
+            <input type="submit" value="Send">        
+            <input type="hidden" name="body">
+        </form>
 
+        </div>
+
+        <div id="footer-wrapper">
+            <footer>
+                <a href="https://www.facebook.com/BurningLeafOfficial/"><img class="icon" src="static/icons/facebook.svg" ></a> 
+                <a href="https://www.youtube.com/channel/UC4ecJ6UkBiQnSFTfg6aq0vA"><img class="icon" src="static/icons/youtube.svg"></a>
+            </footer>
+        </div>       
+ 
+ 
+        <!-- Hamburger skripta -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
     </body>
 </html>
