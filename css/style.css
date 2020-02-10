@@ -22,23 +22,32 @@ body {
 	color: #fff;
 	
 }
-
-.top{
-	min-width: 50%;
-	max-width: 50%;
-}
-.top img {
+.row {
+	display: flex; /* equal height of the children */
+  }
+  
+.col {
+	flex: auto; /* additionally, equal width */
+	padding: 1em;
+  }
+.col img{
 	float: left;
-	width: 50%;
-	height: 50%;
+	max-width: 25%;
+	height: fit-content;
+}
+
+/*.top{
+	width: 25%;
+	float: left;
+	height: 5%;
+	background-image: url("static/logo.png") no-repeat contain;
 }
 
 .top2{
 	float: right;
-
 	min-width:50%;
 	max-width: 75%;
-}
+}*/
 
 .pozadina{
     background-image: radial-gradient(#2c0c01,#000000);
@@ -335,7 +344,7 @@ textarea{
 		padding-top:2%;
 	}
 	.menu {
-        display: block !important;  
+		display: block !important;  
 	}
 
 	.menu a {
@@ -368,5 +377,7 @@ textarea{
 		top:20%;
 		right: 50%;
 	}
-	
+	.menu{
+		float:right;
+	}
 }
