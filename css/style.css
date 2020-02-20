@@ -13,6 +13,10 @@
     font-family: font2;
     src: url(../fonts/RowlandDemoLight.ttf);
 }
+@font-face {
+	font-family:font3;
+	src:url(../fonts/PirataOne-Regular.ttf);
+}
 
 
 body {
@@ -22,50 +26,39 @@ body {
 	color: #fff;
 	
 }
-.row {
-	display: flex; /* equal height of the children */
-  }
-  
-.col {
-	flex: auto; /* additionally, equal width */
-	padding: 1em;
-  }
-.col img{
-	float: left;
-	max-width: 25%;
-	height: fit-content;
+header img{
+	width:200px;
+	height:auto;
+	}
+/*.top {
+	float:left;
 }
-
-/*.top{
-	width: 25%;
-	float: left;
-	height: 5%;
-	background-image: url("static/logo.png") no-repeat contain;
-}
+.top img {
+	width:200px;
+	height:auto;}
 
 .top2{
 	float: right;
+
 	min-width:50%;
 	max-width: 75%;
 }*/
+main{
+	 background-image: radial-gradient(#2c0c01,#000000);
+     background-size: 100%;
+}
 
 .pozadina{
-    background-image: radial-gradient(#2c0c01,#000000);
-   /* background: url("../static/leaf3.jpg") repeat;*/
-    background-size: 100%;
     /*FLEX BOX*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-#p-big{
+.p-big{
+	padding: 20px;
 	font-size: 30px;
 	font-family: font1;
 }
-
-
-
 .event{
 	margin: 40px auto;
 	background-color: rgba(255,255,255,0.35);
@@ -74,73 +67,46 @@ body {
 	border-right: 4px solid rgba(204,0,3,1.00); 
 }
 .event p{
-	padding-top:50px;
-	padding-right: 10px;
+	padding-top: 2px;
+	padding-right: 5px;
 	padding-bottom: 10px;
 	width:75%;
-	padding-left: 200px;
-	float: right;
+}
+.event img{	width: 250px;
+	height: 250px;
+	float: left;
+}
+.event h2{
+	font-family:font3;
+	font-size: 35px;
+}
+.event h3{
+	font-family:font3;
+	font-size: 25px;
 }
 
-/*[class*="col-"] 
-{float:left;}
-.col-l-3 {width:25%;}
-.col-l-6 {width:50%;}
-.col-l-9 {width:75%;}
 
-
-.col-l-6*/
-#one{
+/*#one{
 	min-width: 25%;
 	height: 100%;
 	background-size:contain ;
 	size:250px;
 	background-repeat: no-repeat;
 	background-image: url(../static/event1.jpg);	
-}
-#two{
-	
-	min-width: 25%;
-	
-	height: 100%;
-	background-size:contain ;
-	size:250px;
-	background-repeat: no-repeat;
-	background-image: url(../static/event22.jpg);
-	
-}
-#three{
-	min-width: 25%;
-	height: 100%;
-	background-size:contain ;
-	background-repeat: no-repeat;
-	background-image: url(../static/event33.jpg);
-	
-}
-#four{
-	min-width: 25%;
-	height: 100%;
-	background-size:contain ;
-	background-repeat: no-repeat;
-	background-image: url(../static/event44.jpg);
-	
-}
-
+}*/
 
 a {
 	text-decoration: none;
 }
 
 #header-wrapper {
-    background-image: linear-gradient(#000000,#2c0c01);
+    background: linear-gradient(#000000,#2c0c01);
 	border-bottom: 2px solid #000000;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	/*FLEX BOX*/
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
 }
+
 
 #footer-wrapper {
 	width: 100%;
@@ -158,16 +124,30 @@ a {
 	background: url("../static/burningleaf.jpg") no-repeat center;
     background-size:80% 100%;
 	font-size:25px;
-	font-family:"font2";
+	font-family:font2;
 }
   
 
 header , footer{
-    background-color: rgba(255, 255, 255,0);
     padding-left: 5% ;
     padding-right: 5% ;
     overflow: auto;
 	width:100%;
+}
+
+footer a#gotop{
+	padding: 15px;
+	font-size: 15px;
+	font-family: font3;
+	letter-spacing: 3px;
+	float: right;
+	background: black;
+	color: white;
+}
+#gotop:hover{
+	color: #ba7934;
+	transition: 0.3s;
+	transform: scale(1.2); 
 }
 
 
@@ -178,8 +158,9 @@ nav {
 }
 
 nav a {
+	text-align: center;
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 20px;
@@ -189,6 +170,7 @@ nav a {
 
 nav a:last-child {
 	margin-right: 0;
+
 }
 
 nav a:hover {
@@ -246,7 +228,7 @@ h2 {
 }
 h3{
     font-size: 40px;
-    font-family: font2;
+    font-family: font3;
     text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -256,6 +238,9 @@ h3{
     width:50px;
     height:50px;
 }
+.icon:hover{ 
+	filter:invert(100%);
+}
 .galery{
     width: 450px;
     height: 450px;
@@ -263,7 +248,7 @@ h3{
 }
   
 .galery:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.2); 
 	transition: transform .2s;
 	z-index: 10;
 }
@@ -343,8 +328,10 @@ textarea{
 	header{
 		padding-top:2%;
 	}
+	
 	.menu {
-		display: block !important;  
+        display: block !important;
+		position: relative;
 	}
 
 	.menu a {
@@ -357,27 +344,10 @@ textarea{
 	}
 
 	nav {
-		float: right;
-	}
-
-	
-}
-
-@media screen and (max-width : 689px ){
-	
-	.top img{	
-		position: relative;
-		top:5%;
-		left:75%;
-	}
-
-	nav{
-		text-align: center;
-		position: relative;
-		top:20%;
-		right: 50%;
-	}
-	.menu{
-		float:right;
+		float: none;
 	}
 }
+@media screen and (min-width: 1000px) {
+	header img{float:left;}
+	nav{float: right;}
+	}
